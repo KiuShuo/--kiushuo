@@ -11,6 +11,8 @@
 
 [Swift性能相关](http://www.jianshu.com/p/0d3db4422954?url_type=39&object_type=webpage&pos=1)
 
+[根据IOS Foundation框架汇编反写的KVC,KVO实现](https://github.com/renjinkui2719/DIS_KVC_KVO)
+
 
 Swift构造器：[构造过程](http://wiki.jikexueyuan.com/project/swift/chapter2/14_Initialization.html)  
 **构造器：**是使用类、结构体和枚举类型的实例之前必须执行的准备工作。  
