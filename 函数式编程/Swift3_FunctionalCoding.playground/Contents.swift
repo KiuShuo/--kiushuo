@@ -15,21 +15,32 @@ count = oneToHundred.reduce(0, { (result, i) -> Int in
 })
 debugPrint(count)
 
-// 2.map
+
+// 数组字符串拼接成一个字符串
+let strArr = ["1", "2", "3"]
+let str = strArr.reduce("") { (result, i) -> String in
+    return result + "," + i
+}
+let index = str.index(str.startIndex, offsetBy: 1)
+print(str.substring(from: index))
+
+
+
+// 2.map 修改每一个元素
 var oldArray = [10,20,45,32]
 var newArray = oldArray.map({money in "￥\(money)"})
 newArray = oldArray.map{"$\($0)"}
 debugPrint(newArray) // [￥10, ￥20, ￥45, ￥32]
 
 
-// 3. filter
+// 3. filter 过滤元素
 var oldArray1 = [10,20,45,32]
 var filteredArray  = oldArray1.filter({
     return $0 > 30
 })
 debugPrint(filteredArray) // [45, 32]
 
-// 4. flatMap
+// 4. flatMap 修改每一个元素
 
 let possibleNumbers = ["1", "2", "three", "///4///", "5"]
 
@@ -55,3 +66,9 @@ debugPrint(flatMapped)
 let addOneForFlatMapped = flatMapped.flatMap(addOne) // addOne即为(_: Int) -> Int类型的func
 debugPrint(addOneForFlatMapped)
 // [1, 2, 5]
+
+
+
+
+
+
