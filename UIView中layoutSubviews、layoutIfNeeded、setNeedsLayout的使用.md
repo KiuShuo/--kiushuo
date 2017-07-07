@@ -26,6 +26,10 @@
 
 根据[官方文档](https://developer.apple.com/documentation/uikit/uiview/1622601-setneedslayout)介绍可以看出，该方法的作用是记录布局请求，并立即返回。该方法不会立即更新布局，而是等到下一个更新周期，所以你可以在当前的无效周期内添加多个多个视图的布局，等到下一个周期同一更新。这么做通常可以获得更好的性能。
 
+### View Drawing Cycle
+[官方文档](https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/WindowsandViews/WindowsandViews.html)    
+对 View Drawing Cycle 的理解是这样的：UIKit 需要处理非常多的事件，这些事件组合起来变成了一个非常复杂的事件序列，在这个序列中有些特定的点是 UIKit 专门提供给 UIView 来进行视图更改的。如上所述，在当前 run loop 结束之前，我们有机会做各种视图更改，并且这些更改会在下一个 run loop 体现出来，所以 View Drawing Cycle 就是一次次 run loop 中我们通过 UIKit 得到的 UIView 重布局、重绘机会所组成的循环。
+
 参考资料：  
 https://developer.apple.com/documentation/uikit/uiview#//apple_ref/occ/cl/UIView  
 https://developer.apple.com/documentation/uikit/uiview/1622482-layoutsubviews
