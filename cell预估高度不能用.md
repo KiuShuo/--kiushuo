@@ -28,6 +28,10 @@
 * ==初始状态heightForRow的执行次数 = tableView.height(有效高度) ／ tableView.estimatedRowHeight==  
 * 初始状态heightForRow的执行次数 -> cell总高度 = 高度计算系数n * tableView.height(有效高度); 其中高度计算系数n约等于21(是一个固定的值，具体多少并不重要).  
 
+#### 为什么会有初始状态heightForRow的执行次数 = tableView.height(有效高度) ／ tableView.estimatedRowHeight？
+
+实际上，当设置过预估高度后，初始状态不会再将所有的cell的高度都计算出来（不会先执行n次heightForRow:），而是去执行cellForRow:，而cellForRow:的执行次数时当前tableView可以显示出的可见的cell数，而这个数量与tableView.height和cellHeight有关，当我们设置过预估高度后，系统认为每个cell的高度值是相同的，且都等于tableView.estimatedRowHeight，所以这是后系统计算出的可见cell数量为m = tableView.height(有效高度) ／ tableView.estimatedRowHeight，因此cellForRow会这行m次，而每执行一次cellForRow必定会执行一次heightForRow，所以初始状态下heightForRow的执行次数为m即 初始状态heightForRow的执行次数 = tableView.height(有效高度) ／ tableView.estimatedRowHeight。
+
 #### 为避免滑动界面时出现滑动指示器跳动的情况，预估高度设为多少比较合适？
 
 一般情况下，tableView.height(有效高度)是固定的，所以随着预估高度的值的增大，初始状态heightForRow的执行次数会减少，当初始状态heightForRow的执行次数 < tableView上初始状态下要显示的cell数量的时候，滑动过程中会出现滑动指示器跳动的情况，且出现在初始状态heightForRow的执行次数对应的行之后。  
@@ -35,7 +39,7 @@
 当一个列表显示的数据过多时，我们一般会做分页加载处理，假设一页加载m条数据，根据4寸屏幕计算，tableView.estimatedRowHeight = (568 - 64 - 44) / m, 当m = 20时，tableView.estimatedRowHeight = 23, 即当每页显示20条数据、 tableView.estimatedRowHeight <= 23时，在4寸屏幕上不会出现滑动指示器跳动的情况。同一界面，4.7寸和5.5寸的tableView.height(有效高度) > 4.0寸的tableView.height(有效高度), 所以只要在4.0寸上不会出现滑动指示器跳动，在更大的屏幕上也一定不会出现。
 
 总结：  
-1. 当设置==预估高度tableView.estimatedRowHeight <= tableView.height(需最小适配屏幕尺寸上的有效高度) ／ 每一页要显示的cell数量== 时，就不会出现滑动指示器跳动的情况。  
+1. 当设置==预估高度tableView.estimatedRowHeight <= tableView.height(需最小适配屏幕尺寸上的有效高度) ／ 要显示的cell数量== 时，就不会出现滑动指示器跳动的情况。  
 2. iOS8之后，高度计算次数与系统版本无关，只与tableView.height(有效高度)和tableView.estimatedRowHeight有关。
 
 #### 当列表分页加载时，会不会出现滑动指示器跳动？
