@@ -44,7 +44,7 @@
 ### UIView与CALayer的关系
 
 UIView是对CALayer的封装。  
-CALayer用于显示内容contents；UIView为其提供内容，以及负责处理触摸等事件，参与响应链。
+CALayer用于显示内容contents，即在屏幕上看到的都来源于CALayer；UIView为其提供内容，以及负责处理触摸等事件，参与响应链。
 
 ![layer构造](layer_construct.png)
 
