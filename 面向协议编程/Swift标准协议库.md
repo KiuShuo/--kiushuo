@@ -1,5 +1,8 @@
 ### 标准协议库
 
+参考资料：  
+[我从55个Swift标准库协议中学到了什么？](http://www.cocoachina.com/swift/20160107/14868.html)
+
 1. **`RawRepresentabel`**  
    服从该协议的类型，都可以由关联类转变回的原有的类型。  
    使用符合类型的原始值可简化与Objective-C和传统API的互操作，并简化与其他协议（如Equatable，Comparable和Hashable）的一致性。  
