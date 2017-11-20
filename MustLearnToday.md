@@ -11,10 +11,39 @@
 
 [Swift性能相关](http://www.jianshu.com/p/0d3db4422954?url_type=39&object_type=webpage&pos=1)
 
+## KVC的高阶用法
+参考资料：  
+[KVC进阶（三）](http://www.jianshu.com/p/6b32f6279347)  
+
+找出数组字典中相同key值的字典的value值组成的数组：
+
+``` 
+let arr: NSArray = [["a": "1"], ["a": "2"], ["1": "3"], ["b": "1"]]
+let aArr: NSMutableArray = NSMutableArray(array: arr.value(forKey: "a") as! NSArray)
+// aArr = ["1", "2", "<null>", "<null>"]
+aArr.removeObject(identicalTo: NSNull())
+// aArr = ["1", "2"]
+```
+
+
+## KVO的原理
 [根据IOS Foundation框架汇编反写的KVC,KVO实现](https://github.com/renjinkui2719/DIS_KVC_KVO)
 
+参考资料：  
+[objc kvo简单探索](http://blog.sunnyxx.com/2014/03/09/objc_kvo_secret/)  
+[KVO进阶（二）](http://www.jianshu.com/p/a8809c1eaecc)  
 
-Swift构造器：[构造过程](http://wiki.jikexueyuan.com/project/swift/chapter2/14_Initialization.html)  
+简单的说，KVO之所能够监控到属性值的变化，是因为系统在背后做了如下几步操作：
+
+1. 当一个`object`有观察者时，动态创建这个`object`的类的子类；
+2. 对于每个被观察的`property`，重写其`set`方法；
+3. 在重写的set方法中调用`- willChangeValueForKey:`和`- didChangeValueForKey:`通知观察者；
+4. 当一个`property`没有观察者时，删除重写的方法；
+5. 当没有`observer`观察任何一个`property`时，删除动态创建的子类。
+
+
+
+## Swift构造器：[构造过程](http://wiki.jikexueyuan.com/project/swift/chapter2/14_Initialization.html)  
 **构造器：**是使用类、结构体和枚举类型的实例之前必须执行的准备工作。  
 具体操作包括设置实例中每个存储属性的初始值和执行其他必须的设置或初始化工作。  
 通过定义构造器来实现构造过程，这些构造器可以看做是用来创建特殊类型新实例的特殊方法。  
