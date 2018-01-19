@@ -1,4 +1,4 @@
-# UIKit动力学
+# scheme跳转
 
 参考资料：  
 [iOS scheme跳转机制](https://www.jianshu.com/p/138b44833cda)  
