@@ -1,3 +1,9 @@
+# 0基础入门
+[Learn Version Control with Git
+](https://www.git-tower.com/learn/git/ebook/cn/command-line/introduction#start)  
+[廖雪峰Git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)  
+[git-recipes](https://github.com/geeeeeeeeek/git-recipes/wiki)  
+
 # SourceTree用法
 [Git可视化工具SourceTree的使用](http://blog.csdn.net/chenyufeng1991/article/details/51347083)  
 
@@ -43,3 +49,4 @@ master分支 + 开发者分支
   
 每个开发者都从master上fork一个分支，每个开发者都clone自己的远端分支到本地进行开发，开发结束后push到自己的远端代码，等开发结束后在自己的远端发起pull request到master，由master的维护者来检查合并。
 
+##### Rebase和merge

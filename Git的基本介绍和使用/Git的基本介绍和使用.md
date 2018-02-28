@@ -48,7 +48,7 @@ On branch master
 Changes not staged for commit:
 // 使用git add／rm 文件名 命令将文件add到暂缓区stage
 (use "git add/rm <file>..." to update what will be committed)
-// 使用git checkout 文件名 命令撤销在工作区的修改
+// 使用git checkout -- 文件名 命令撤销在工作区的修改
 (use "git checkout -- <file>..." to discard changes in working 
 ```  
 2、当执行完`git add/rm 文件名`使文件到达暂缓区的时候，此时执行`git status`提示：
