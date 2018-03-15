@@ -24,7 +24,7 @@
 
 ### `setNeedsLayout`
 
-根据[官方文档](https://developer.apple.com/documentation/uikit/uiview/1622601-setneedslayout)介绍可以看出，该方法的作用是记录布局请求，并立即返回。该方法不会立即更新布局，而是等到下一个更新周期，所以你可以在当前的无效周期内添加多个多个视图的布局，等到下一个周期同一更新。这么做通常可以获得更好的性能。
+根据[官方文档](https://developer.apple.com/documentation/uikit/uiview/1622601-setneedslayout)介绍可以看出，该方法的作用是记录布局请求，并立即返回。该方法不会立即更新布局，而是等到下一个更新周期，所以你可以在当前的无效周期内添加多个视图的布局，等到下一个周期一同更新。这么做通常可以获得更好的性能。
 
 ### View Drawing Cycle
 [官方文档](https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/WindowsandViews/WindowsandViews.html)    
