@@ -1,4 +1,7 @@
-[参考资料](https://www.git-tower.com/learn/git/ebook/cn/command-line/advanced-topics/rebase#start)  
+[参考资料](https://www.git-tower.com/learn/git/ebook/cn/command-line/advanced-topics/rebase#start) 
+
+#### Rebase变基操作的黄金法则  
+***不要在公共分支上使用*** 
 
 #### Rebase 代替合并
 虽然合并（merge）操作可以用来简单和方便地整合改动，但是它却不是唯一的方法。“Rebase” 就是另一种替代手段。  
@@ -68,8 +71,7 @@
 >
 “一个提交仅仅包括很少的属性，比如作者，日期，变动和谁是它的父提交”。很显然，Rebase变基操作会改变父提交，从而导致提交历史的改变。反应在sourceTree上是提交时间的变化(但是在远端网页上的提交记录显示的时间却是正确的)，时间由之前的准确提交时刻变成了变基成功后的时间。当多个不同提交时，提交次数未发生改变(不会变成一个)，仅改变时间。
 
-#### 变基操作的黄金法则  
-***不要在公共分支上使用***
+以上文章来源于[Rebase 代替合并](https://www.git-tower.com/learn/git/ebook/cn/command-line/advanced-topics/rebase#start)
 
 #### rebase的使用时机
 上面已经清楚的介绍了使用和不使用rebase的区别，很显然==如果A分支不是公共分支，仅仅是一个本地开发分支的话==，并不会影响已经提交的远程分支的提交记录，只会影响到做rebase操作的开发者的提交记录，但可以保持提交记录时间轴的干净简洁，如果本地开发者的C3提交记录的时间不那么重要的话，==建议使用rebase操作==；  
