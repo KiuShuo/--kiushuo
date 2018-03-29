@@ -1,4 +1,4 @@
-# UIImageView的contentModes
+# UIView的contentModes
 
 ```
 public enum UIViewContentMode : Int {
