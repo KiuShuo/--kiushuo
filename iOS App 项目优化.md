@@ -20,6 +20,10 @@ Xcode 测量 mian之前的启动时间：
 编译时间的直接影响开发效率，之前的时候项目的编译时长达到过5分钟左右;   
 希望能控制在3分钟之内，尽量时间越短越好。  
 
+[有效提升Swift编译速度](http://hyyy.me/2016/12/01/SwfitCompileTimeSpeedingUp/)  
+[优化 Swift 编译时间](https://github.com/rxg9527/Optimizing-Swift-Build-Times)  
+[iOS组件化实践(二)：准备](https://www.jianshu.com/p/824d4227e123)  
+
 #### 5 打包耗时优化  
 仅从目前的现状 也就是现在的万家2B项目的前提下说，目前jenkins打包的包含的几个步骤，以及大概的耗时；  
 git pull 更新代码 1s <- 检查更新描述文件 1s -> pod install 1s-19s=18s -> xcodebuild clean archive 19s-725s=706s 11min -> xcodebuild exportArchive 725s-755s=30s -> 上传蒲公英 755s-838s=83s   
