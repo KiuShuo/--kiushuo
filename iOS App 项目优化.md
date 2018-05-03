@@ -58,6 +58,13 @@ App 的完整未压缩大小不得超过 4GB
 #### 9 应用流畅性优化     
 有几个界面确实存在肉眼可见的卡顿的现象，比方说 我的执业地点、热点医讯界面，具体的掉帧或者说卡顿情况需要进一步的使用Xcode自带的工具进行检测，并通过对代码的优化来改进。    
 
+Permisson to debug com.pingan.wanjiaB was denied. The app must be signed with a development identify
+
+热点医讯界面：  
+如果不进行赋值操作，则帧率在53-60之间
+
+[离屏渲染优化详解：实例示范+性能测试](https://www.jianshu.com/p/ca51c9d3575b)  
+[UIView的alpha、hidden和opaque属性之间的关系和区别](https://blog.csdn.net/wzzvictory/article/details/10076323https://blog.csdn.net/wzzvictory/article/details/10076323)  
 [Instruments性能优化-Core Animation](https://www.jianshu.com/p/439e158b44de)  
   
   
