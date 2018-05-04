@@ -24,7 +24,9 @@ Xcode 测量 mian之前的启动时间：
 [优化 Swift 编译时间](https://github.com/rxg9527/Optimizing-Swift-Build-Times)  
 [iOS组件化实践(二)：准备](https://www.jianshu.com/p/824d4227e123)  
 [蜂鸟商家版 iOS 组件化 / 模块化实践总结](https://juejin.im/post/5a620cf5f265da3e36415764)  
-
+[优化 Xcode 编译时间](https://juejin.im/post/5ad33a086fb9a028cf32ebe1)  
+[ccache - 让Xcode编译速度飞起来](https://blog.csdn.net/KelvinFlying/article/details/75644926)  
+[CocoaPods和Carthage浅析(新)](https://www.jianshu.com/p/9d0885f944e3)  
 #### 5 打包耗时优化  
 仅从目前的现状 也就是现在的万家2B项目的前提下说，目前jenkins打包的包含的几个步骤，以及大概的耗时；  
 git pull 更新代码 1s <- 检查更新描述文件 1s -> pod install 1s-19s=18s -> xcodebuild clean archive 19s-725s=706s 11min -> xcodebuild exportArchive 725s-755s=30s -> 上传蒲公英 755s-838s=83s   
