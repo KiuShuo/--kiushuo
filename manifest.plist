@@ -11,7 +11,19 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://www.baidu.com</string>
+					<string>https://coding.net/u/kiushuo/p/custom_ipa_dowload/git/raw/master/CarBar.ipa</string>
+				</dict>
+				<dict>
+					<key>kind</key>
+					<string>display-image</string>
+					<key>url</key>
+					<string>https://raw.githubusercontent.com/KiuShuo/imageSource/master/icons/120.png</string>
+				</dict>
+				<dict>
+					<key>kind</key>
+					<string>full-size-image</string>
+					<key>url</key>
+					<string>https://raw.githubusercontent.com/KiuShuo/imageSource/master/icons/180.png</string>
 				</dict>
 			</array>
 			<key>metadata</key>
