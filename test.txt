@@ -4,6 +4,9 @@ itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/
 itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/KiuShuo/--kiushuo/master/wanjia2B.plist
 
 
+itms-services://?action=download-manifest&url=https://coding.net/u/kiushuo/p/custom_ipa_dowload/git/raw/master/wanjia2B.plist
+
+
 https://cli.im/
 
 
