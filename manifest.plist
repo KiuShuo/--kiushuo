@@ -31,11 +31,11 @@
 				<key>bundle-identifier</key>
 				<string>com.pajk.personalDoctorInternational.en</string>
 				<key>bundle-version</key>
-				<string>1.23.0</string>
+				<string>1.1.0</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
-				<string>wanjia2B</string>
+				<string>国际化</string>
 			</dict>
 		</dict>
 	</array>
