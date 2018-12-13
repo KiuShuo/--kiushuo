@@ -16,16 +16,12 @@
                <dict>
                    <key>kind</key>
                    <string>display-image</string>
-                   <key>needs-shine</key>
-                   <true/>
                    <key>url</key>
                    <string>https://pdrepo-bx.pajkdc.com/dev/pharmacy-ios/f4424/f4424_1_0_0_prod_37/pharmacy-ios_f4424_1_0_0_prod_37.png</string>
                </dict>
                <dict>
                    <key>kind</key>
                    <string>full-size-image</string>
-                   <key>needs-shine</key>
-                   <true/>
                    <key>url</key>
                    <string>https://pdrepo-bx.pajkdc.com/dev/pharmacy-ios/f4424/f4424_1_0_0_prod_37/pharmacy-ios_f4424_1_0_0_prod_37.png</string>
                </dict>
@@ -33,8 +29,6 @@
            <dict>
                <key>bundle-identifier</key>
                <string>com.pajk.pharmacy.en</string>
-               <key>bundle-version</key>
-               <string>10000</string>
                <key>kind</key>
                <string>software</string>
                <key>subtitle</key>
