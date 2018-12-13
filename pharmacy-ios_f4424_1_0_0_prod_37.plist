@@ -31,6 +31,10 @@
                <string>com.pajk.pharmacy.en</string>
                <key>kind</key>
                <string>software</string>
+               <key>subtitle</key>
+               <string>一心堂好医生</string>
+               <key>title</key>
+               <string>一心堂好医生</string>
            </dict>
        </dict>
    </array>
